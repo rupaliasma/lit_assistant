@@ -1,0 +1,8 @@
+services:
+  litagent:
+    build: .
+    image: ghcr.io/soumickmj/litagent:latest
+    env_file: .env
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
